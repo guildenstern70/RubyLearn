@@ -1,6 +1,7 @@
 require_relative 'class'
 require_relative 'collections'
 require_relative 'switch'
+require_relative 'exceptions'
 
 # 1. Classes
 puts '*** Classes ***'
@@ -17,5 +18,11 @@ puts
 # 3. Switches
 puts '*** Switches ***'
 puts Switch.switch 5
+puts
+
+# 4. Exceptions
+puts '*** Exceptions ***'
+Exceptions.raise_exception
+Exceptions.raise_and_rescue
 puts
 
