@@ -14,6 +14,7 @@ puts
 # 2. Collections
 puts '*** Collections ***'
 Collections.simple_all_usage_collection
+Collections.hash_map
 puts
 
 # 3. Switches
