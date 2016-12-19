@@ -2,6 +2,7 @@ require_relative 'class'
 require_relative 'collections'
 require_relative 'switch'
 require_relative 'exceptions'
+require_relative 'inheritance'
 
 # 1. Classes
 puts '*** Classes ***'
@@ -22,7 +23,16 @@ puts
 
 # 4. Exceptions
 puts '*** Exceptions ***'
-Exceptions.raise_exception
-Exceptions.raise_and_rescue
+begin
+    Exceptions.raise_exception
+    Exceptions.raise_and_rescue
+rescue Exception => e
+    puts e.message
+    puts e.backtrace.inspect
+end
 puts
+
+# 5. Inheritance
+puts '*** Inheritance ***'
+test_inheritance
 
