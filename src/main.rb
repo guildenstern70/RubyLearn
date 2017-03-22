@@ -25,11 +25,11 @@ puts
 # 4. Exceptions
 puts '*** Exceptions ***'
 begin
-    Exceptions.raise_exception
-    Exceptions.raise_and_rescue
-rescue Exception => e
-    puts e.message
-    puts e.backtrace.inspect
+  Exceptions.raise_exception
+  Exceptions.raise_and_rescue
+rescue StandardError => e
+  puts e.message
+  puts e.backtrace.inspect
 end
 puts
 
