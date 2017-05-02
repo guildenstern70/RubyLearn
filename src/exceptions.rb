@@ -1,16 +1,16 @@
 module Exceptions
 
-  def Exceptions.raise_exception
+  def self.raise_exception
     puts 'Before the raise.'
     raise 'An error has occured'
   end
 
-  def Exceptions.argument(x)
+  def self.argument(x)
     raise ArgumentError, 'Argument is not numeric' unless x.is_a? Numeric
     1.0 / x
   end
 
-  def Exceptions.raise_and_rescue
+  def self.raise_and_rescue
     begin
       raise 'A test exception.'
     rescue Exception => e
