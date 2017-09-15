@@ -1,3 +1,12 @@
+#
+# RubyLearn
+# (c) Alessio Saltarin 2017
+#
+# This software is distributed under MIT License
+# See LICENSE file
+#
+
+# A sample class in Ruby
 class Omino
 
   def initialize
@@ -22,12 +31,12 @@ class Omino
   end
 
   def move_right(steps)
-    set_facing 'R'
+    facing 'R'
     advance steps
   end
 
   def move_left(steps)
-    set_facing 'L'
+    facing 'L'
     advance steps
   end
 
@@ -44,34 +53,18 @@ class Omino
     end
   end
 
-  def set_facing(where)
-
+  def facing(where)
     if where == 'R'
-
-      if @facing == :NORTH
-        @facing = :EAST
-      elsif @facing == :SOUTH
-        @facing = :WEST
-      elsif @facing == :EAST
-        @facing = :SOUTH
-      else
-        @facing = :NORTH
-      end
-
+      @facing = :EAST if @facing == :NORTH
+      @facing = :WEST if @facing == :SOUTH
+      @facing = :SOUTH if @facing == :EAST
+      @facing = :NORTH if @facing == :WEST
     else
-
-      if @facing == :NORTH
-        @facing = :WEST
-      elsif @facing == :SOUTH
-        @facing = :EAST
-      elsif @facing == :EAST
-        @facing = :NORTH
-      else
-        @facing = :SOUTH
-      end
-
+      @facing = :WEST if @facing == :NORTH
+      @facing = :EAST if @facing == :SOUTH
+      @facing = :NORTH if @facing == :EAST
+      @facing = :SOUTH if @facing == :WEST
     end
-
   end
 
 end

@@ -1,7 +1,14 @@
+#
+# RubyLearn
+# (c) Alessio Saltarin 2017
+#
+# This software is distributed under MIT License
+# See LICENSE file
+#
+
+# For Loops Examples
 module ForLoops
-
   def self.fors
-
     k = 0
     num = 5
 
@@ -16,17 +23,15 @@ module ForLoops
     end
 
     ## While
-    while k < num  do
+    while k < num
       puts('Inside the loop i = #k')
       k += 1
     end
 
     ## Until
-    until k > num  do
+    until k > num
       puts('Inside the loop i = #k')
       k += 1
     end
-
   end
-
 end

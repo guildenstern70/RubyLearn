@@ -1,3 +1,12 @@
+#
+# RubyLearn
+# (c) Alessio Saltarin 2017
+#
+# This software is distributed under MIT License
+# See LICENSE file
+#
+
+
 # Animal class
 # Base class for all animals
 class Animal

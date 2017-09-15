@@ -1,3 +1,12 @@
+#
+# RubyLearn
+# (c) Alessio Saltarin 2017
+#
+# This software is distributed under MIT License
+# See LICENSE file
+#
+
+# Sample collections
 module Collections
 
   def Collections.simple_all_usage_collection
@@ -14,6 +23,11 @@ module Collections
 
     puts 'The collection has an item #121!' if my_collection.include? 121
 
+  end
+
+  # noinspection RubyLiteralArrayInspection
+  def Collections.initialize
+    array = [ '1', '2', '3' ]
   end
 
   def Collections.hash_map

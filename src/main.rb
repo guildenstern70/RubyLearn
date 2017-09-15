@@ -1,3 +1,12 @@
+#
+# RubyLearn
+# (c) Alessio Saltarin 2017
+#
+# This software is distributed under MIT License
+# See LICENSE file
+#
+
+
 require_relative 'class'
 require_relative 'collections'
 require_relative 'switch'
