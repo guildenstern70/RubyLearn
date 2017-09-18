@@ -26,8 +26,8 @@ class Omino
     else
       move_left(steps)
     end
-    puts 'Moving '+ mossa[0] +' of ' + steps.to_s + ' steps. Now facing ' + @facing.to_s + '.'
-    puts 'I am now in ['+ @xposition.to_s + ', ' + @yposition.to_s + ']'
+    puts "Moving #{mossa[0]} of #{steps} steps. Now facing #{@facing}"
+    puts "I am now in #{@xposition}, #{@yposition}]"
   end
 
   def move_right(steps)
