@@ -26,13 +26,15 @@ module Exceptions
     puts e.message + ' ' + e.backtrace.inspect
   end
 
-  def self.multiple_lines_rescue
+  def self.raise_rescue_else_ensure
     my_var = 2001
     raise 'Test Exception 2' if my_var.negative?
   rescue StandardError => e
     puts e.message
   else
     puts 'No errors here! MyVar = ' + my_var
+  ensure
+    puts 'All done.'
   end
 
 end
