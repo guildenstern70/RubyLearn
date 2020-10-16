@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017
+# (c) Alessio Saltarin 2017-2020
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -14,18 +14,16 @@ module Exceptions
     raise 'An error has occured'
   end
 
-  def self.argument(x)
-    raise ArgumentError, 'Argument is not numeric' unless x.is_a? Numeric
+  def self.argument(some_number)
+    raise ArgumentError, 'Argument is not numeric' unless some_number.is_a? Numeric
+
     1.0 / x
   end
 
   def self.raise_and_rescue
-    begin
-      raise 'A test exception.'
-    rescue Exception => e
-      puts e.message
-      puts e.backtrace.inspect
-    end
+    raise 'A test exception.'
+  rescue StandardError => e
+    puts e.message + ' ' + e.backtrace.inspect
   end
 
 end

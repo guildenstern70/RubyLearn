@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017
+# (c) Alessio Saltarin 2017-2020
 #
 # This software is distributed under MIT License
 # See LICENSE file

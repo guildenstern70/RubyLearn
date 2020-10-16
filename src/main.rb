@@ -1,11 +1,10 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017
+# (c) Alessio Saltarin 2017-2020
 #
 # This software is distributed under MIT License
 # See LICENSE file
 #
-
 
 require_relative 'class'
 require_relative 'collections'
@@ -45,4 +44,3 @@ puts
 # 5. Inheritance
 puts '*** Inheritance ***'
 test_inheritance
-
