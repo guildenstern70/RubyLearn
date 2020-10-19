@@ -20,7 +20,7 @@ module Collections
     puts("Element #200> #{my_collection.at(200)}")
     puts("Element #200> #{my_collection[200]}")
 
-    puts 'The collection has an item #121!' if my_collection.include? 121
+    return my_collection
   end
 
   def self.initialize
