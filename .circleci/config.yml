@@ -15,10 +15,9 @@ jobs:
     steps:
       - checkout # pull down our git code.
       - run:
-          - name: "bundler"
+          - name: bundler
           - command: bundle -v
       - ruby/bundle-install
-
   test:
     docker:
       - image: cimg/ruby:2.7-node # this is our primary docker image, where step commands run.
@@ -26,7 +25,7 @@ jobs:
       - checkout
       - ruby/install-deps
       - run:
-          - name: "rake"
+          - name: Rake Tests
           - command: rake
 
 # We use workflows to orchestrate the jobs that we declared above.
