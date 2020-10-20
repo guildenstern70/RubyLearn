@@ -26,13 +26,16 @@ module Exceptions
     puts e.message + ' ' + e.backtrace.inspect
   end
 
-  def self.raise_rescue_else_ensure
-    my_var = 2001
+  def self.raise_rescue_else_ensure(my_var)
+    result = my_var
     raise 'Test Exception 2' if my_var.negative?
+
+    result
   rescue StandardError => e
-    puts e.message
-  else
-    puts 'No errors here! MyVar = ' + my_var
+    result = 198
+    puts 'MyVar was <0! Setting it to = ' + result.to_s
+
+    result
   ensure
     puts 'All done.'
   end

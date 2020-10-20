@@ -42,24 +42,12 @@ end
 
 # Pesce class
 # Derived from Animal
-class Pesce < Animal
+class Fish < Animal
 
-  def nuota
+  def swim
     who_am_i
     puts(' and I am swimming')
   end
 end
 
-
-def test_inheritance
-
-  cat = Animal.new('Cat', 5)
-  cat.eat('fish')
-  puffer = Pesce.new('Puffer Fish', 2)
-  puffer.eat('Plancton')
-  puffer.nuota
-
-  puts("#{cat.name} is older than #{puffer.name}") if cat.older_than? puffer
-
-end
 

@@ -20,7 +20,7 @@ module Collections
     puts("Element #200> #{my_collection.at(200)}")
     puts("Element #200> #{my_collection[200]}")
 
-    return my_collection
+    my_collection
   end
 
   def self.initialize
@@ -33,6 +33,7 @@ module Collections
     hash1['One'] = 100
     hash1['Two'] = 200
     puts "Hash 1: One = #{hash1['One']}"
+    hash1
   end
 
   def self.hash_map_alt

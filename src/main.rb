@@ -12,12 +12,6 @@ require_relative 'switch'
 require_relative 'exceptions'
 require_relative 'inheritance'
 
-# 2. Collections
-puts '*** Collections ***'
-Collections.simple_all_usage_collection
-Collections.hash_map
-puts
-
 # 3. Switches
 puts '*** Switches ***'
 puts Switch.switch 5

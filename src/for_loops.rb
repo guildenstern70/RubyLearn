@@ -30,10 +30,13 @@ module ForLoops
     end
   end
 
-  def self.each
+  def self.each(max)
     ## Each
-    (0..5).each do |j|
-      puts "Value of local variable is #{j}"
+    sum = 0
+    (0..max).each do |j|
+      sum += j
     end
+    puts "Sum is #{sum}"
+    sum
   end
 end
