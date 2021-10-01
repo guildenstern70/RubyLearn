@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2020
+# (c) Alessio Saltarin 2017-2021
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -12,12 +12,11 @@ task default: %w[run]
 
 task :run do
   puts "Welcome to RubyLearn rakefile. Using 'test' task is the only way to run this program!"
-  Rake::Task['test'].invoke
 end
 
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.libs << 'lib'
-  t.test_files = FileList['./test/**/*.rb']
+Rake::TestTask.new do |t|
+  t.test_files = FileList['test/**/*_test.rb']
 end
+desc 'Run tests'
+
 

@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2020
+# (c) Alessio Saltarin 2017-2021
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -8,7 +8,6 @@
 
 # Sample collections
 module Collections
-
   def self.simple_all_usage_collection
     my_collection = [] # Undefined size collection
     (100..999).each do |n|
@@ -24,8 +23,9 @@ module Collections
   end
 
   def self.initialize
-    array = %w[1 2 3]
-    puts("Elements in array > #{array.size}")
+    my_array = [1, 2, 3]
+    size = my_array.size.to_s
+    puts("Elements in array >#{size}")
   end
 
   def self.hash_map
@@ -41,9 +41,8 @@ module Collections
       'One': 100,
       'Two': 200
     }
-    hash2.keys.each do |key|
+    hash2.each_key do |key|
       puts "Hash 2: #{key} = " + hash2[key].to_s
     end
   end
-
 end

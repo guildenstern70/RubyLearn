@@ -1,13 +1,21 @@
+#
+# RubyLearn
+# (c) Alessio Saltarin 2017-2021
+#
+# This software is distributed under MIT License
+# See LICENSE file
+#
 require 'minitest/autorun'
+
 require_relative '../src/class'
 require_relative '../src/collections'
 require_relative '../src/switch'
 require_relative '../src/exceptions'
 require_relative '../src/for_loops'
 require_relative '../src/inheritance'
+require_relative '../src/polymorphism'
 
 class AllTest < MiniTest::Test
-
   def setup
     # Do nothing
   end
@@ -17,19 +25,19 @@ class AllTest < MiniTest::Test
   end
 
   def test_that_omino_works
-    @omino = Omino.new
-    @omino.move 'R2, L3'
-    distance = @omino.distance
+    omino = Omino.new
+    omino.move 'R2, L3'
+    distance = omino.distance
     puts "Class distance = #{distance}"
     assert_equal distance, 2
   end
 
-  def test_collections_1
+  def test_collections1
     retnum = Collections.simple_all_usage_collection
     assert_equal (retnum.include? 121), true
   end
 
-  def test_collections_2
+  def test_collections2
     hash1 = Collections.hash_map
     assert_equal hash1['One'], 100
   end
@@ -59,5 +67,9 @@ class AllTest < MiniTest::Test
     puffer.swim
     puts("#{cat.name} is older than #{puffer.name}") if cat.older_than? puffer
     assert cat.older_than? puffer
+  end
+
+  def test_polimorphism
+    assert_equal all_together_now, 1529.4423602330987
   end
 end

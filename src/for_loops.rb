@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2020
+# (c) Alessio Saltarin 2017-2021
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -8,7 +8,6 @@
 
 # For Loops Examples
 module ForLoops
-
   def self.classic_for
     for i in 0..5
       puts "Value of local variable is #{i}"

@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2020
+# (c) Alessio Saltarin 2017-2021
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -8,7 +8,6 @@
 
 # Example of using switch
 module Switch
-
   def self.switch(a_number)
     case a_number
     when 1..5
@@ -21,8 +20,4 @@ module Switch
       "You gave me #{a_number} -- I have no idea what to do with that."
     end
   end
-
 end
-
-
-

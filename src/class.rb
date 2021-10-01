@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2020
+# (c) Alessio Saltarin 2017-2021
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -8,7 +8,6 @@
 
 # A sample class in Ruby
 class Omino
-
   def initialize
     @xposition = 0
     @yposition = 0
@@ -55,16 +54,23 @@ class Omino
 
   def facing(where)
     if where == 'R'
-      @facing = :EAST if @facing == :NORTH
-      @facing = :WEST if @facing == :SOUTH
-      @facing = :SOUTH if @facing == :EAST
-      @facing = :NORTH if @facing == :WEST
+      face_right
     else
-      @facing = :WEST if @facing == :NORTH
-      @facing = :EAST if @facing == :SOUTH
-      @facing = :NORTH if @facing == :EAST
-      @facing = :SOUTH if @facing == :WEST
+      face_left
     end
   end
 
+  def face_right
+    @facing = :EAST if @facing == :NORTH
+    @facing = :WEST if @facing == :SOUTH
+    @facing = :SOUTH if @facing == :EAST
+    @facing = :NORTH if @facing == :WEST
+  end
+
+  def face_left
+    @facing = :WEST if @facing == :NORTH
+    @facing = :EAST if @facing == :SOUTH
+    @facing = :NORTH if @facing == :EAST
+    @facing = :SOUTH if @facing == :WEST
+  end
 end

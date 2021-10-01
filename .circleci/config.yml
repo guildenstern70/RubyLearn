@@ -11,7 +11,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/ruby:2.7-node # use a tailored CircleCI docker image.
+      - image: cimg/ruby:3.0.2 # use a tailored CircleCI docker image.
     steps:
       - checkout # pull down our git code.
       - run:
@@ -19,7 +19,7 @@ jobs:
           command: bundle install
   test:
     docker:
-      - image: cimg/ruby:2.7-node # this is our primary docker image, where step commands run.
+      - image: cimg/ruby:3.0.2 # this is our primary docker image, where step commands run.
     steps:
       - checkout
       - ruby/install-deps

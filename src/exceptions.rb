@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2020
+# (c) Alessio Saltarin 2017-2021
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -8,7 +8,6 @@
 
 # Exceptions example
 module Exceptions
-
   def self.raise_exception
     puts 'Before the raise.'
     raise 'An error has occured'
@@ -23,7 +22,7 @@ module Exceptions
   def self.raise_and_rescue
     raise 'A test exception.'
   rescue StandardError => e
-    puts e.message + ' ' + e.backtrace.inspect
+    puts "#{e.message} #{e.backtrace.inspect}"
   end
 
   def self.raise_rescue_else_ensure(my_var)
@@ -33,11 +32,11 @@ module Exceptions
     result
   rescue StandardError => e
     result = 198
-    puts 'MyVar was <0! Setting it to = ' + result.to_s
+    puts e.message
+    puts "MyVar was <0! Setting it to = #{result}"
 
     result
   ensure
     puts 'All done.'
   end
-
 end
