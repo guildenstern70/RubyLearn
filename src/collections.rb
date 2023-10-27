@@ -8,6 +8,7 @@
 
 # Sample collections
 module Collections
+
   def self.simple_all_usage_collection
     my_collection = [] # Undefined size collection
     (100..999).each do |n|
@@ -20,6 +21,18 @@ module Collections
     puts("Element #200> #{my_collection[200]}")
 
     my_collection
+  end
+
+  def self.set
+    my_set = Set.new
+    my_set << "A" # other way to add an object to a set or array
+    my_set << "B"
+    my_set << "C"
+    my_set << "C"
+    my_set.each do |item|
+      puts item
+    end
+    my_set
   end
 
   def self.initialize

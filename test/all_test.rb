@@ -42,6 +42,11 @@ class AllTest < Minitest::Test
     assert_equal hash1['One'], 100
   end
 
+  def test_collections3
+    my_set = Collections.set
+    assert_equal my_set.count, 3
+  end
+
   def test_switch
     switch = Switch.switch 6
     assert_equal switch, "It's 6"
