@@ -15,3 +15,11 @@ Install dependencies with:
 
     bundle install
 
+## Run
+
+The only way to run this program is to run tests. Run tests with:
+
+    rake test
+
+
+

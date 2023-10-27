@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2021
+# (c) Alessio Saltarin 2017-2023
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -15,7 +15,7 @@ require_relative '../src/for_loops'
 require_relative '../src/inheritance'
 require_relative '../src/polymorphism'
 
-class AllTest < MiniTest::Test
+class AllTest < Minitest::Test
   def setup
     # Do nothing
   end
