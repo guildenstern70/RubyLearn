@@ -37,7 +37,7 @@ class Animal
   protected :age
 end
 
-# Pesce class
+# Fish class
 # Derived from Animal
 class Fish < Animal
   def swim

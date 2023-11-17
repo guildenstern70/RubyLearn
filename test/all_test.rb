@@ -14,6 +14,7 @@ require_relative '../src/exceptions'
 require_relative '../src/for_loops'
 require_relative '../src/inheritance'
 require_relative '../src/polymorphism'
+require_relative '../src/mixins'
 
 class AllTest < Minitest::Test
   def setup
@@ -76,5 +77,10 @@ class AllTest < Minitest::Test
 
   def test_polimorphism
     assert_equal all_together_now, 1529.4423602330987
+  end
+
+  def test_mixins
+    mixin = Parent.new
+    assert_equal mixin.a2, 'This is Child two.'
   end
 end
