@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2023
+# (c) Alessio Saltarin 2017-2025
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -15,6 +15,7 @@ require_relative '../src/for_loops'
 require_relative '../src/inheritance'
 require_relative '../src/polymorphism'
 require_relative '../src/mixins'
+require_relative '../src/kwargs'
 
 class AllTest < Minitest::Test
   def setup
@@ -26,7 +27,7 @@ class AllTest < Minitest::Test
   end
 
   def test_that_omino_works
-    omino = Omino.new
+    omino = LittleMan.new
     omino.move 'R2, L3'
     distance = omino.distance
     puts "Class distance = #{distance}"
@@ -39,13 +40,18 @@ class AllTest < Minitest::Test
   end
 
   def test_collections2
-    hash1 = Collections.hash_map
+    hash1 = Collections.hash_map_is_a_dictionary
     assert_equal hash1['One'], 100
   end
 
   def test_collections3
-    my_set = Collections.set
+    my_set = Collections.set_is_a_collection_with_uniques
     assert_equal my_set.count, 3
+  end
+
+  def test_collections4
+    my_array = Collections.you_can_also_use_arrays
+    assert_equal my_array[2], 300
   end
 
   def test_switch
@@ -82,5 +88,10 @@ class AllTest < Minitest::Test
   def test_mixins
     mixin = Parent.new
     assert_equal mixin.a2, 'This is Child two.'
+  end
+
+  def test_kwargs
+    kwargs = KWArgs.method_with_keyword_arguments(one: 2, two: 'three')
+    assert_equal kwargs, [2, 'three']
   end
 end

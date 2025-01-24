@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2023
+# (c) Alessio Saltarin 2017-2025
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -23,7 +23,7 @@ module Collections
     my_collection
   end
 
-  def self.set
+  def self.set_is_a_collection_with_uniques
     my_set = Set.new
     my_set << "A" # other way to add an object to a set or array
     my_set << "B"
@@ -41,12 +41,22 @@ module Collections
     puts("Elements in array >#{size}")
   end
 
-  def self.hash_map
+  def self.hash_map_is_a_dictionary
     hash1 = {}
     hash1['One'] = 100
     hash1['Two'] = 200
     puts "Hash 1: One = #{hash1['One']}"
     hash1
+  end
+
+  def self.you_can_also_use_arrays
+    my_array = Array.new
+    my_array[0] = 100
+    my_array[1] = 200
+    puts "Array: 0 = #{my_array[0]}"
+    my_array << 300
+    puts "Array: 2 = #{my_array[2]}"
+    my_array
   end
 
   def self.hash_map_alt

@@ -1,3 +1,11 @@
+#
+# RubyLearn
+# (c) Alessio Saltarin 2017-2025
+#
+# This software is distributed under MIT License
+# See LICENSE file
+#
+
 # frozen_string_literal: true
 
 # Modules consist a method
