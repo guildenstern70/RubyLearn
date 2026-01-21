@@ -1,6 +1,6 @@
 #
 # RubyLearn
-# (c) Alessio Saltarin 2017-2025
+# (c) Alessio Saltarin 2017-2026
 #
 # This software is distributed under MIT License
 # See LICENSE file
@@ -49,6 +49,16 @@ module Collections
     hash1
   end
 
+  def self.hash_map_alt
+    hash2 = {
+      'One': 100,
+      'Two': 200
+    }
+    hash2.each_key do |key|
+      puts "Hash 2: #{key} = " + hash2[key].to_s
+    end
+  end
+
   def self.you_can_also_use_arrays
     my_array = Array.new
     my_array[0] = 100
@@ -59,13 +69,5 @@ module Collections
     my_array
   end
 
-  def self.hash_map_alt
-    hash2 = {
-      'One': 100,
-      'Two': 200
-    }
-    hash2.each_key do |key|
-      puts "Hash 2: #{key} = " + hash2[key].to_s
-    end
-  end
+
 end
