@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #
 # RubyLearn
 # (c) Alessio Saltarin 2017-2026
@@ -18,7 +20,7 @@ require_relative '../src/kwargs'
 RSpec.describe Class do
   context 'LittleMan class' do
     it 'calculates distance correctly' do
-      puts "Testing LittleMan class"
+      puts 'Testing LittleMan class'
       omino = LittleMan.new
       omino.move 'R2, L3'
       distance = omino.distance
@@ -27,11 +29,11 @@ RSpec.describe Class do
   end
 end
 
-RSpec.describe  Collections do
+RSpec.describe Collections do
   context 'Collections module' do
     it 'checks simple_all_usage_collection' do
       retnum = Collections.simple_all_usage_collection
-      expect(retnum.include? 121).to eq(true)
+      expect(retnum.include?(121)).to eq(true)
     end
 
     it 'checks hash_map_is_a_dictionary' do
@@ -49,7 +51,6 @@ RSpec.describe  Collections do
       expect(my_array[2]).to eq(300)
     end
   end
-
 end
 
 RSpec.describe Switch do
@@ -80,7 +81,7 @@ RSpec.describe 'Inheritance' do
       puffer = Fish.new('Puffer Fish', 2)
       puffer.eat('Plancton')
       puffer.swim
-      expect(cat.older_than? puffer).to eq(true)
+      expect(cat.older_than?(puffer)).to eq(true)
     end
   end
 end
@@ -116,6 +117,22 @@ RSpec.describe 'KWArgs' do
     it 'checks method_with_keyword_arguments method' do
       kwargs = KWArgs.method_with_keyword_arguments(one: 2, two: 'three')
       expect(kwargs).to eq([2, 'three'])
+    end
+
+    it 'checks method_with_required_kwargs method' do
+      result = KWArgs.method_with_required_kwargs(id: 42, name: 'Alice')
+      expect(result).to eq({ id: 42, name: 'Alice' })
+    end
+
+    it 'checks delegate_keyword_arguments forwarding' do
+      result = KWArgs.delegate_keyword_arguments(one: 10, two: 'twenty')
+      expect(result).to eq([10, 'twenty'])
+    end
+
+    it 'checks call_method_with_keyword_arguments' do
+      results = KWArgs.call_method_with_keyword_arguments
+      expect(results.length).to eq(6)
+      expect(results.last).to eq([42, 'answer'])
     end
   end
 end
